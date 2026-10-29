@@ -1,0 +1,1 @@
+{"name":"stealth-ownership-group","private":true,"scripts":{"deploy":"wrangler deploy"},"devDependencies":{"wrangler":"^4.0.0"}}
