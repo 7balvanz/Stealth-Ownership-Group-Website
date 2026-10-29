@@ -2,6 +2,7 @@ const json = (body,status=200)=>Response.json(body,{status,headers:{'Cache-Contr
 export default {
  async fetch(request,env){
   const url=new URL(request.url);
+  if(url.hostname==='www.stealthownershipgroup.com'){url.hostname='stealthownershipgroup.com';return Response.redirect(url.toString(),301);}
   if(url.pathname!='/api/inquiry')return env.ASSETS.fetch(request);
   if(request.method!=='POST')return json({error:'Method not allowed'},405);
   if(request.headers.get('origin')!==url.origin)return json({error:'Invalid request origin'},403);

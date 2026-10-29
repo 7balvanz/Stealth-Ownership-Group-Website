@@ -2,6 +2,32 @@
   "name": "stealth-ownership-group",
   "main": "worker.js",
   "compatibility_date": "2026-10-28",
-  "assets": {"directory":"./public","binding":"ASSETS","run_worker_first":["/api/*"]},
-  "observability": {"enabled":true}
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/api/*"
+    ]
+  },
+  "observability": {
+    "enabled": true
+  },
+  "send_email": [
+    {
+      "name": "CONTACT_EMAIL",
+      "allowed_sender_addresses": [
+        "contact@stealthownershipgroup.com"
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "pattern": "stealthownershipgroup.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.stealthownershipgroup.com",
+      "custom_domain": true
+    }
+  ]
 }
