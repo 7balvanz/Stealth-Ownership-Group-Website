@@ -1,3 +1,5 @@
 /philosophy.html /investment-thesis.html 301
 /philosophy /investment-thesis.html 301
-/team.html /operators.html 301
+/team.html /acquisitions.html 301
+/operators.html /acquisitions.html 301
+/operators /acquisitions.html 301
